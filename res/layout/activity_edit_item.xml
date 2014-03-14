@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:text="Edit Item"
+        android:text="@string/edit_item"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <EditText
@@ -30,7 +30,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/etEditItem"
         android:layout_centerHorizontal="true"
-        android:text="Save"
+        android:text="@string/save"
         android:onClick="saveItem" />
 	
 </RelativeLayout>

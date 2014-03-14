@@ -1,48 +1,39 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/container"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    tools:context="codepath.apps.simpletodo.ToDoActivity"
-    tools:ignore="MergeRootFrame" >
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="100">
+
+    <ListView
+        android:id="@+id/lvItems"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="10"
+        android:fadeScrollbars="false" >
+
+    </ListView>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:weightSum="100">
+        android:layout_height="fill_parent" >
 
-        <ListView
-            android:id="@+id/lvItems"
-            android:layout_width="match_parent"
-            android:layout_height="fill_parent"
-            android:layout_weight="10"
-            android:fadeScrollbars="false" >
+        <EditText
+            android:id="@+id/etNewItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10" 
+            android:hint="@string/add_new_item">
+        </EditText>
 
-        </ListView>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="fill_parent" >
-
-            <EditText
-                android:id="@+id/etNewItem"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10" 
-                android:hint="Add New Item">
-            </EditText>
-
-            <Button
-                android:id="@+id/btnAddItem"
-                style="?android:attr/buttonStyleSmall"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Add"
-                android:onClick="addToDoItem" />
-        </LinearLayout>
-
+        <Button
+            android:id="@+id/btnAddItem"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add"
+            android:onClick="addToDoItem" />
     </LinearLayout>
 
-</FrameLayout>
+</LinearLayout>
